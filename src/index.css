@@ -5,9 +5,81 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F5B801;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.app{
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.app header img{
+	max-width: 100%;
+}
+.app section {
+	margin:20px;
+}
+.app main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.win-lose{
+	font-size: 45px;
+	transform: scale(4.0);
+	transition: transform 0.2s ease-in;
+	margin:10px;
+	opacity: 0;
+}
+@media screen and (min-width: 600px){
+	.win-lose{
+		font-size: 55px;
+	}
+}
+.users-choice{
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+}
+.users-choice img{
+	cursor: pointer;		
+}
+@media screen and (min-width: 600px){
+	.users-choice{
+		flex-direction: row;
+	}
+	.users-choice img{	
+		max-width: 33.3333334%;
+	}
+}
+.result{
+	display: flex;
+}
+.result img{
+	opacity: 0;
+	transform: scale(2.0);
+	transition: transform 0.3s ease-in;
+}
+.result .vs{
+	display: flex;
+	align-items: center;
+	font-size:40px;
+	font-weight: 800;
+	color:red;
+	margin: 0 20px 0 20px;
+	opacity: 0;
+	transform: scale(4.0);
+	transition: transform 0.3s ease-in;
+}
+.match-history{
+	font-size: 20px;
+}
+.match-history td{
+	padding:0 20px 0 20px;
 }
